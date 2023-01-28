@@ -1,4 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import tailwindStyles from "./styles/app.css";
+import customStyles from "./styles/custom.css";
+
 import {
   Links,
   LiveReload,
@@ -13,6 +16,12 @@ export const meta: MetaFunction = () => ({
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
 });
+
+
+export function links() {
+  return [{ rel: "stylesheet", href: tailwindStyles }, { rel: "stylesheet", href: customStyles }]
+}
+
 
 export default function App() {
   return (

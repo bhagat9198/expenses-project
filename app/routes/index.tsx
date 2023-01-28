@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <section>
-        <h1>Welcome to Remix</h1>
+        <h1 className='text-3xl text-red-600 hello' >Welcome to Remix</h1>
         <Form method='post' >
           <input defaultValue={Math.random()} name="id" />
           <button type='submit' >Create dummy user Submit</button>
